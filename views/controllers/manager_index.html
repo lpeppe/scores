@@ -6,18 +6,18 @@
 {/style}
 
 {if !empty($submitedFields)}
-    <h3 class="ow_center" style="margin-bottom: 10px;">{text key="scores+form_output_data"}</h3>
+  <!--  <h3 class="ow_center" style="margin-bottom: 10px;">{text key="scores+form_output_data"}</h3>
     <div class="ow_stdmargin scores-form-output ow_border">
         {foreach from=$submitedFields item="submitedField"}
         <div class="scores-form-output-line">
             {$submitedField.label} = "{$submitedField.value}"
         </div>
         {/foreach}
-    </div>
+    </div>-->
 {/if}
 
 {form name="scores_form"}
-    <table class="ow_table_1 ow_form ow_stdmargin">
+    <!--<table class="ow_table_1 ow_form ow_stdmargin">
         <tbody>
             <tr class="ow_tr_first ow_alt1">
                 <td class="ow_label">
@@ -25,11 +25,14 @@
                 </td>
                 <td class="ow_value">
                     {input name="file"}
-                </td>
+                </td>-->
                 <!--<td class="ow_desc ow_small">
                     &nbsp;
                 </td>-->
-            </tr>
+           <!-- </tr>
         </tbody>
-    </table>
+    </table>-->
 {/form}
+
+
+<div class="content" id="viewer" style="padding-bottom: 5pt"></div>

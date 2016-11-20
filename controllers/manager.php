@@ -18,7 +18,6 @@ class SCORES_CTRL_Manager extends OW_ActionController
         $form->setEnctype(Form::ENCTYPE_MULTYPART_FORMDATA);
         $this->addForm($form);
         $submitedFields = array();
-
         if ( OW::getRequest()->isPost() && $form->isValid($_POST) )
         {
             $values = $form->getValues();
@@ -44,6 +43,9 @@ class SCORES_CTRL_Manager extends OW_ActionController
             }
 
             $this->assign("submitedFields", $submitedFields);
+            OW::getDocument()->addScript(OW::getPluginManager()->getPlugin('scores')->getStaticJsUrl().'vexflow.musicxml.min.js');
+            OW::getDocument()->addScript(OW::getPluginManager()->getPlugin('scores')->getStaticJsUrl().'vexflow.musicxml.js');
+            OW::getDocument()->addScript(OW::getPluginManager()->getPlugin('scores')->getStaticJsUrl().'demo.js');
         }
     }
 }
